@@ -1,0 +1,86 @@
+* {
+  background-image: url("http://i.imgur.com/mzCE1hr.png");
+  background-repeat: repeat;
+}
+
+.content {
+  background-color: transparent;
+  font-family: Lato, Helvetica;
+  font-weight: 100;
+}
+
+.title {
+  margin: auto;
+  font-size: 80px;
+  color: #094aa8;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  margin: auto;
+}
+
+.photo {
+  width: 150px;
+  margin: 150px auto 0;
+}
+
+#photo {
+  border-radius: 50%;
+  width: 150px;
+}
+
+.button {
+  width: 70px;
+  height: 25px;
+  padding: 15px;
+  margin: 20px;
+}
+
+.nav {
+  width: 368px;
+  margin: 50px auto;
+}
+
+
+#enter {
+  border: 4px solid white;
+  padding: 10px;
+  text-align: center;
+  width: 300px;
+  font-size: 45px;
+  margin: auto;
+}
+
+#enter:hover {
+  color: #00ff12;
+  border-color: #00ff12;
+  animation: shake .82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0,0,0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px,0,0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px,0,0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px,0,0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px,0,0);
+  }
+}
