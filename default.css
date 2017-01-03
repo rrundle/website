@@ -12,7 +12,7 @@
 .title {
   margin: auto;
   font-size: 80px;
-  color: #094aa8;
+  color: #000000;
   text-align: center;
 }
 
@@ -23,7 +23,7 @@ a {
 
 .photo {
   width: 150px;
-  margin: 150px auto 0;
+  margin: 100px auto 0;
 }
 
 #photo {
@@ -36,6 +36,12 @@ a {
   height: 25px;
   padding: 15px;
   margin: 20px;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+.button:hover{
+  cursor: pointer;
 }
 
 .nav {
@@ -83,4 +89,12 @@ a {
   60% {
     transform: translate3d(4px,0,0);
   }
+}
+
+.main {
+  height: 100vh;
+}
+
+.about {
+  height: 100vh;
 }
