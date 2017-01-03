@@ -2,8 +2,7 @@ document.addEventListener('click', function(e) {
   if (e.target.id.indexOf('about') !== -1) {
     var about = document.querySelector('.about')
     about.scrollIntoView({
-      behavior: 'smooth',
-      duration: 'slow',
+      behavior: 'smooth'
     })
   }
   if (e.target.id.indexOf('projects') !== -1) {
