@@ -1,13 +1,15 @@
-* {
+body {
+
+}
+
+.material {
   background-image: url("http://i.imgur.com/rTU0xAR.png");
   background-repeat: repeat;
   font-size: 1.1em;
-}
-
-.content {
   background-color: transparent;
   font-family: Lato, Helvetica;
   font-weight: 100;
+  margin-top: -50px;
 }
 
 .title {
@@ -25,7 +27,8 @@ a {
 
 .photo {
   width: 150px;
-  margin: 50px auto 50px;;
+  margin: 50px auto 50px;
+  padding-top: 100px;
 }
 
 #photo {
@@ -171,10 +174,10 @@ a {
   width: 100%;
 }
 
-.all-projects {
-  width: 90%;
+#all-projects {
+  width: 84%;
   height: 20%;
-  margin: 0 auto;
+  margin: 25px auto;
 }
 
 .project {
@@ -197,4 +200,16 @@ p {
   margin: 20px auto !important;
   font-weight: 300;
   font-size: 1.2em;
+}
+
+img {
+  width: 20%;
+}
+
+.card {
+  margin: auto;
+}
+
+#contact-box {
+  clear: both;
 }
