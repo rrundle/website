@@ -49,7 +49,7 @@ a {
 }
 
 .nav {
-  width: 368px;
+  width: 395px;
   margin: 50px auto;
 }
 
@@ -58,7 +58,7 @@ a {
 }
 
 .info {
-  height: 1000px;
+  height: 100vh;
 }
 
 @-webkit-keyframes fadeInLeftBig {
@@ -190,4 +190,11 @@ a {
   left: .5%;
   margin-left: 15px;
   text-align: right;
+}
+
+p {
+  width: 85%;
+  margin: 20px auto !important;
+  font-weight: 300;
+  font-size: 1.2em;
 }
