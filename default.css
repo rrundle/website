@@ -1,6 +1,7 @@
 * {
   background-image: url("http://i.imgur.com/rTU0xAR.png");
   background-repeat: repeat;
+  font-size: 1.1em;
 }
 
 .content {
@@ -10,10 +11,11 @@
 }
 
 .title {
-  margin: auto;
+  margin: 15px auto;
   font-size: 80px;
   color: #000;
   text-align: center;
+  height: 80px;
 }
 
 a {
@@ -23,7 +25,7 @@ a {
 
 .photo {
   width: 150px;
-  margin: 100px auto 0;
+  margin: 50px auto 50px;;
 }
 
 #photo {
@@ -184,6 +186,8 @@ a {
 }
 
 .orange {
-  width: 5%;
+  width: 8%;
   left: .5%;
+  margin-left: 15px;
+  text-align: right;
 }
