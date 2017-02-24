@@ -1,5 +1,5 @@
 * {
-  background-image: url("http://i.imgur.com/mzCE1hr.png");
+  background-image: url("http://i.imgur.com/rTU0xAR.png");
   background-repeat: repeat;
 }
 
@@ -29,6 +29,8 @@ a {
 #photo {
   border-radius: 50%;
   width: 150px;
+  border: solid 8px #dededf;
+  box-shadow: 3px 5px 50px -10px #36454f;
 }
 
 .button {
@@ -161,4 +163,27 @@ a {
   backface-visibility: visible !important;
   -webkit-animation-name: flipInX;
   animation-name: flipInX;
+}
+
+.projects {
+  width: 100%;
+}
+
+.all-projects {
+  width: 90%;
+  height: 20%;
+  margin: 0 auto;
+}
+
+.project {
+  display: inline-block;
+  width: 20%;
+  height: 20%;
+  margin: 15px 25px;
+  border: solid 1px #fff;
+}
+
+.orange {
+  width: 5%;
+  left: .5%;
 }
