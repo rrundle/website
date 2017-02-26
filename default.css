@@ -21,16 +21,19 @@ a {
   margin: auto;
 }
 
+a:hover {
+  color: #000;
+}
+
 .photo {
   width: 150px;
   margin: 50px auto 50px;
-  padding-top: 100px;
+  padding-top: 70px;
 }
 
 #photo {
   border-radius: 50%;
   width: 150px;
-  border: solid 8px #dededf;
   box-shadow: 3px 5px 50px -10px #36454f;
 }
 
@@ -41,14 +44,17 @@ a {
   margin: 20px;
   text-decoration: none;
   font-size: 1em;
+  font-weight: bold;
+  color: #636363;
 }
 
 .button:hover {
   cursor: pointer;
+  color: #000;
 }
 
 .nav {
-  width: 395px;
+  width: 375px;
   margin: 50px auto;
 }
 
@@ -192,7 +198,7 @@ a {
 }
 
 p {
-  width: 85%;
+  width: 70%;
   margin: 20px auto !important;
   font-weight: 300;
   font-size: 1.2em;
@@ -204,6 +210,7 @@ img {
 
 .card {
   margin: auto;
+  font-weight: bold;
 }
 
 #contact-box {
@@ -214,9 +221,41 @@ img {
   width: 178px;
   margin: 25px auto;
 }
+
 .social-icon {
   color: #636363;
   text-shadow: 0px 2px 3px rgba(255,255,255,.5);
   font-size: 2em !important;
   margin: 0 15px;
+}
+
+.social-icon:hover {
+  color: #000;
+}
+
+#contact-me {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5em;
+  margin: 25px auto;
+}
+
+.email {
+  text-align: center;
+  font-size: 1.25em;
+  font-weight: 300;
+}
+
+.email > a {
+  text-decoration: none;
+  color: #636363;
+}
+
+.email > a:hover {
+  color: #000;
+  cursor: pointer;
+}
+
+.ribbon:hover {
+  cursor: pointer;
 }
