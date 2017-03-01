@@ -28,12 +28,13 @@ a:hover {
 .photo {
   width: 150px;
   margin: 50px auto 50px;
-  padding-top: 70px;
+  padding-top: 100px;
 }
 
 #photo {
   border-radius: 50%;
   width: 150px;
+  border: solid 8px #dededf;
   box-shadow: 3px 5px 50px -10px #36454f;
 }
 
@@ -219,7 +220,7 @@ img {
 
 .social {
   width: 178px;
-  margin: 25px auto;
+  margin: 25px auto 100px;
 }
 
 .social-icon {
