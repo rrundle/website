@@ -1,14 +1,14 @@
 {
   "name": "website",
   "version": "1.0.0",
-  "description": "ryanrundle.com",
+  "description": "Ryan Rundle",
   "engines": {
     "node": "6.10.0"
   },
   "main": "index.js",
   "scripts": {
     "start": "node .",
-    "watch": "nodemon index.js"
+    "watch": "nodemon ."
   },
   "repository": {
     "type": "git",
