@@ -1,3 +1,19 @@
+body {
+  scroll-behavior: smooth;
+}
+
+.about {
+  scroll-behavior: smooth;
+}
+
+.projects {
+  scroll-behavior: smooth;
+}
+
+.contact {
+  scroll-behavior: smooth;
+}
+
 .material {
   background-image: url("http://i.imgur.com/rTU0xAR.png");
   background-repeat: repeat;
