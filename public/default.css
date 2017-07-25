@@ -191,6 +191,7 @@ a:hover {
 
 .projects {
   width: 100%;
+  height: 100%
 }
 
 #all-projects {
@@ -275,4 +276,36 @@ img {
 
 .ribbon:hover {
   cursor: pointer;
+}
+
+.cards {
+  width: 95%;
+}
+
+.footer {
+  font-size: 40px;
+  font-family: Raleway;
+  font-weight: 500;
+  text-align: center;
+  margin: 25px auto 0;
+  color: #636363;
+  text-shadow: -1px -1px 0px rgba(255,255,255,0.3), 1px 1px 0px rgba(0,0,0,0.8);
+  opacity: 0.4;
+  height: 100px;
+}
+
+.not {
+  text-decoration: line-through;
+  position: relative;
+  margin-right: 15px;
+}
+
+.and {
+  font-family: Shadows Into Light Two;
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  transform: rotate(12deg);
+  font-weight: bolder;
+  color: #303030;
 }
