@@ -222,6 +222,13 @@ p {
   font-size: 1.2em;
 }
 
+.prof {
+  width: 70%;
+  margin: 0 auto !important;
+  font-weight: 300;
+  font-size: 1.2em;
+}
+
 img {
   width: 20%;
 }
@@ -274,6 +281,10 @@ img {
   cursor: pointer;
 }
 
+.ribbon {
+  padding-left: 40px !important;
+}
+
 .ribbon:hover {
   cursor: pointer;
 }
@@ -307,4 +318,14 @@ img {
   transform: rotate(12deg);
   font-weight: bolder;
   color: #303030;
+}
+
+h3 {
+  float: left;
+  clear: both;
+}
+
+.commerce {
+  float: left;
+  clear: both;
 }
