@@ -26,8 +26,9 @@ body {
 
 .title {
   margin: 15px auto;
-  font-size: 80px;
+  font-size: 6rem;
   color: #000;
+  line-height: 6rem;
   text-align: center;
   height: 80px;
 }
@@ -43,7 +44,7 @@ a:hover {
 
 .photo {
   width: 150px;
-  margin: 50px auto 50px;
+  margin: 50px auto;
   padding-top: 100px;
 }
 
