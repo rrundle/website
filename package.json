@@ -1,14 +1,15 @@
 {
   "name": "website",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Ryan Rundle",
   "engines": {
-    "node": "7.7.3"
+    "node": "8.16.0"
   },
   "main": "index.js",
   "scripts": {
-    "start": "node app.js",
-    "watch": "nodemon app.js"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "eject": "react-scripts eject"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,33 @@
   "homepage": "https://github.com/rrundle/website#readme",
   "dependencies": {
     "body-parser": "^1.17.2",
-    "express": "^4.14.1"
+    "express": "^4.14.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-draggable": "^4.1.0",
+    "react-scripts": "3.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.7.2",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.17.0",
+    "eslint-plugin-react-hooks": "^1.7.0"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

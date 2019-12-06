@@ -1,198 +1,43 @@
 <!DOCTYPE html>
-<html lang="en us">
-	<head>
-    <meta charset="utf-8">
-	  <link type="text/css" rel="stylesheet" href="default.css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,900|Raleway:100,400,500|Shadows+Into+Light+Two" rel="stylesheet">
-		<link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.css" rel="stylesheet">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="animate.css">
-    <title>Ryan Rundle</title>
-	</head>
-	<body>
-		<div class="material">
-			<div class="main">
-				<div class="photo animated flipInX">
-					<img id="photo" src="http://i.imgur.com/PUTFTnn.jpg">
-				</div>
-				<div class="title animated flipInX">Hi, my name is Ryan.</div>
-				<div class="title animated flipInX">I'm a software developer.</div>
-				<div class="nav">
-					<span class="button" id="about">About</span>
-					<span class="button" id="projects">Projects</span>
-					<span class="button" id="contact">Contact</span>
-				</div>
-				<div class="social">
-					<span><a href="https://github.com/rrundle"><i id="github" class="fa fa-github social-icon" aria-hidden="true"></i></a></span>
-					<span><a href="https://linkedin.com/in/ryanrundle"><i id="linkedin" class="fa fa-linkedin social-icon" aria-hidden="true"></i></a></span>
-					<span><a href="https://twitter.com/RyanRundle1"><i id="twitter" class="fa fa-twitter social-icon" aria-hidden="true"></i></a></span>
-				</div>
-			</div>
-			<div class="info about animated fadeInLeftBig">
-				<div class="ui orange ribbon label" id="about-title">
-					About
-				</div>
-				<p>
-					I've been around technology for a while. Dipped my toes into product management, web design, but once I finally dove into writing code full time, that was it. I couldn't stop. Most of the projects in my porfolio are are a result of discovering something awesome in Javascript or a sweet framework/library like React or Redux and was trying something new. I decided right away that I wanted to be able to build applications soup-to-nuts which is why I learned (always learning) the full stack. Right now I'm fan-girling over Semantic-UI-React and React-Router on the front end. Languages that interest me: Elixir, Ruby, Python. Message me if you think there's a language, framework, or library I should be checking out.
-				</p>
-				<p>
-					I've also played soccer my whole life and always will. I'm a die hard Gooner, I've been following Arsenal since 1995 when they signed my favorite all-time player, Dennis Bergkamp. Other than that, I love cycling, triathlons, spending time with my wonderful wife and 2 kids.
-				</p>
-				<div class="prof">Proficiencies:</div>
-				<br>
-				<div class="prof">HTML</div>
-				<div class="prof">CSS/SASS</div>
-				<div class="prof">Javascript</div>
-				<div class="prof">Angular</div>
-				<div class="prof">React</div>
-				<div class="prof">Redux</div>
-				<div class="prof">Node.JS</div>
-				<div class="prof">Express.JS</div>
-				<div class="prof">PostgeSQL</div>
-				<div class="prof">Knex.JS</div>
-				<div class="prof">Neo4j</div>
-				<div class="prof">Mocha</div>
-				<div class="prof">Chai</div>
-				<div class="prof">Ionic/Cordova</div>
-				<div class="prof">Apple/Google app deployment</div>
-				<div class="prof">Git version control</div>
-				<div class="prof">Shopify</div>
-			</div>
-			<div class="info projects animated fadeInLeftBig">
-				<div class="ui orange ribbon label" id="projects-title">
-					Projects
-				</div>
-				<div id="all-projects">
-					<div class="ui link cards">
-					  <div class="card">
-					    <div class="image">
-					      <img src="http://i.imgur.com/maeMyOz.png">
-					    </div>
-					    <div class="content">
-					      <div class="header">Cobalt</div>
-					      <div class="description">
-					        <i>(in progress)</i> Simple, easy, content management system.
-					      </div>
-					    </div>
-					    <div class="extra content">
-					      <span class="right floated">
-					        	2017
-					      </span>
-					      <span>
-					        <i class="github icon"></i>
-					        <a href="https://github.com/rrundle/cobalt" target="_blank">Github</a>
-					      </span>
-					    </div>
-					  </div>
-					  <div class="card">
-					    <div class="image">
-					      <img src="http://i.imgur.com/8EhQqzX.png">
-					    </div>
-					    <div class="content">
-					      <div class="header">LunchMe</div>
-					      <div class="description">
-					        Food delivery via sms emoji
-					      </div>
-					    </div>
-					    <div class="extra content">
-					      <span class="right floated">
-					        2017
-					      </span>
-					      <span>
-					        <i class="github icon"></i>
-							  <a href="https://github.com/rrundle/lunch-me" target="_blank">Github</a>
-					      </span>
-					    </div>
-					  </div>
-					  <div class="card">
-					    <div class="image">
-								<img src="http://i.imgur.com/NnH3cLo.png">
-					    </div>
-					    <div class="content">
-					      <div class="header">Dribblr</div>
-					      <div class="description">
-					        Soccer dribbling game using timer functions
-					      </div>
-					    </div>
-					    <div class="extra content">
-					      <span class="right floated">
-					        2016
-					      </span>
-					      <span>
-					        <i class="github icon"></i>
-							  <a href="https://github.com/rrundle/dribbling" target="_blank">Github</a>
-					      </span>
-					    </div>
-					  </div>
-						<div class="card">
-							<div class="image">
-								<img src="http://i.imgur.com/iKbN6AL.png">
-							</div>
-							<div class="content">
-								<div class="header">Gulp</div>
-								<div class="description">
-									Front-end yelp clone to find bomb places to eat
-								</div>
-							</div>
-							<div class="extra content">
-								<span class="right floated">
-									2016
-								</span>
-								<span>
-									<i class="github icon"></i>
-									<a href="https://github.com/rrundle/bomb-eats" target="_blank">Github</a>
-								</span>
-							</div>
-						</div>
-						<div class="card commerce">
-							<div class="image">
-								<img src="http://i.imgur.com/ZmlpMdK.png">
-							</div>
-							<div class="content">
-								<div class="header">Club Jerky</div>
-								<div class="description">
-									Shopify hosted jerky subscription service.
-								</div>
-							</div>
-							<div class="extra content">
-								<span class="right floated">
-									2014
-								</span>
-								<span>
-									<i class="world icon"></i>
-									<a href="http://clubjerky.com" target="_blank">Site</a>
-								</span>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="info contact animated fadeInLeftBig" id="contact-box">
-				<div class="ui orange ribbon label" id="contacts-title">
-					Contact
-				</div>
-				<div id="contact-me">
-					Get in touch
-				</div>
-				<div class="contact-methods">
-					<div class="email">
-						<a href="mailto:ryan@ryanrundle.com"><i class="fa fa-envelope" aria-hidden="true"></i></a>
-						<a href="mailto:ryan@ryanrundle.com">ryan@ryanrundle.com</a>
-					</div>
-				</div>
-			</div>
-			<div class="footer">
-				Work smart
-				<span class="not">
-				NOT
-				<span class="and">
-					AND
-				</span>
-			</span>
-				hard.
-			</div>
-		</div>
-		<script src="main.js"></script>
-		<script src="zenscroll-min.js"></script>
-	</body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
 </html>
