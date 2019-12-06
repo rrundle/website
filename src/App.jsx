@@ -35,10 +35,13 @@ const App = () => {
   return (
     <div className="App">
       <header className={`App-header ${light ? 'App-header-on' : 'App-header-off'}`}>
-        <h3>Hello There</h3>
+        <h3>{light ? 'Hi, I\'m Ryan Rundle' : 'Hello There'}</h3>
         <div className={`light-bright ${light && 'light-bright-on'}`} />
         <div className="light-wrapper">
           <div className={`light-bulb ${light ? 'light-bulb-light' : 'light-bulb-dark'}`} />
+        </div>
+        <div className="light-bulb-bottom-wrapper">
+          <div className="light-bulb-bottom" />
         </div>
         <Draggable
           axis="y"
