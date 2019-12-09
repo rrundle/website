@@ -4,6 +4,7 @@ h3 {
 }
 
 .App {
+  font-family: Special Elite;
   text-align: center;
 }
 
@@ -12,6 +13,7 @@ h3 {
 }
 
 .App-header {
+  background-color: #251F21;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -21,12 +23,47 @@ h3 {
   color: white;
 }
 
-.App-header-off {
-  background-color: #251F21;
+@keyframes flash {
+  from, 50%, to {
+    opacity: 1;
+  }
+
+  25%, 75% {
+    opacity: 0;
+  }
 }
 
-.App-header-on {
-  background-color: #241E20;
+@keyframes bulb {
+  from, 50%, to {
+    fill: #FDE27C;
+  }
+
+  25%, 75% {
+    fill: #F3F2F0;
+  }
+}
+
+.brickwall-wrapper {
+  display: flex;
+  animation-name: flash;
+  animation-duration: .4s;
+  animation-fill-mode: both;
+  border-radius: 30%;
+  position: absolute;
+  top: -90px;
+  left: 1px;
+  filter: brightness(.5);
+  box-shadow: inset 0px 0px 40px 40px #251F21;
+}
+
+.bulb-lit {
+  animation-name: bulb;
+  animation-duration: .4s;
+  fill: #FDE27C;
+}
+
+.bulb-unlit {
+  fill: #F3F2F0;
 }
 
 .chain-link {
@@ -44,62 +81,39 @@ h3 {
   flex-direction: column;
   justify-content: flex-start;
   margin-left: 3px;
-  margin-top: -40px;
+  margin-top: -75px;
   min-height: 300px;
   width: 75px;
   z-index: 1;
 }
 
 .light-bright {
-  width: 50vw;
-  height: 20vh;
-  position: absolute;
-  top: 170px;
   border-bottom: none;
   border-radius: 53%;
   filter: blur(70px);
   opacity: .9;
+  z-index: 1;
+  position: absolute;
+  width: 50vw;
+  height: 150px;
+  top: -60px;
 }
 
 .light-bright-on {
+  animation-name: flash;
+  animation-duration: .4s;
   border-top: solid #FDE27C 120px;
 }
 
-.light-wrapper {
-  width: 25vw;
-  z-index: 2;
-}
-
-.light-bulb {
-  background-position-x: center;
-  background-repeat: no-repeat;
-  background-size: 125px;
-  height: 157px;
-  object-fit: cover;
-  width: 100%;
-}
-
-.light-bulb-bottom {
-  background-image: url('./images/light_bulb_bottom_copy.png');
-  background-repeat: no-repeat;
-  background-size: 85px;
-  height: 85px;
-  margin-left: -42px;
+.light-bright-wrapper {
+  width: 50vw;
+  height: 30vh;
   position: absolute;
-  width: 85px;
+  top: 170px;
+}
+
+.light-bulb-svg {
+  height: 200px;
+  width: 200px;
   z-index: 2;
-}
-
-.light-bulb-bottom-wrapper {
-  margin-top: -7px;
-  position: relative;
-}
-
-.light-bulb-dark {
-  background-image: url('./images/light_bulb_full_dark_copy2.png');
-}
-
-.light-bulb-light {
-  background-image: url('./images/light_bulb_full_light_copy2.png');
-
 }

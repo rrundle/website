@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Draggable from 'react-draggable'
+import Brickwall from './icons/Brickwall'
+import LightBulb from './icons/LightBulb'
 import './App.css'
 
 const App = () => {
@@ -10,15 +12,17 @@ const App = () => {
   const [chainPulled, setChainPulled] = useState(false)
 
   const handleDragStart = (e) => {
-    setDownPosition(e.pageY)
+    const yPosition = e.pageY || e.changedTouches[0].pageY
+    setDownPosition(yPosition)
   }
 
   const handleDragStop = (e) => {
-    setUpPosition(e.pageY)
+    const yPosition = e.pageY || e.changedTouches[0].pageY
+    setUpPosition(yPosition)
   }
 
   useEffect(() => {
-    if (mouseUp > mouseDown && (mouseUp - mouseDown) > 50) {
+    if (mouseUp > mouseDown && (mouseUp - mouseDown) > 37) {
       setLight(true)
     }
     if (light) {
@@ -27,37 +31,25 @@ const App = () => {
     if (mouseUp > mouseDown) {
       setChainPulled(true)
     }
-    if (chainPulled) {
-      resetChain(true)
-    }
   }, [chainPulled, chainReset, mouseUp, mouseDown, light])
 
   return (
     <div className="App">
-      <header className={`App-header ${light ? 'App-header-on' : 'App-header-off'}`}>
+      <header className="App-header">
         <h3>{light ? 'Hi, I\'m Ryan Rundle' : 'Hello There'}</h3>
-        <div className={`light-bright ${light && 'light-bright-on'}`} />
-        <div className="light-wrapper">
-          <div className={`light-bulb ${light ? 'light-bulb-light' : 'light-bulb-dark'}`} />
+        <div className="light-bright-wrapper">
+          <div className={`light-bright ${light ? 'light-bright-on' : ''}`} />
         </div>
-        <div className="light-bulb-bottom-wrapper">
-          <div className="light-bulb-bottom" />
-        </div>
+        <LightBulb light={light} />
         <Draggable
           axis="y"
-          bounds={{
-            top: 0,
-            bottom: 100
-          }}
+          bounds={{ top: 0, bottom: 80 }}
           onStart={handleDragStart}
           onStop={handleDragStop}
-          position={chainReset && {
-            x: 0, y: 0
-          }}
+          position={chainReset && { x: 0, y: 0 }}
         >
           <div className="draggable-element">
             <div className="chain-wrapper">
-              <div className="chain-link" />
               <div className="chain-link" />
               <div className="chain-link" />
               <div className="chain-link" />
