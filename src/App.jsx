@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import Draggable from 'react-draggable'
-import Brickwall from './icons/Brickwall'
 import LightBulb from './icons/LightBulb'
 import './App.css'
 
