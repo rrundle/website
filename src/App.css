@@ -1,3 +1,43 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes flash {
+  from, 50%, to {
+    opacity: 1;
+  }
+
+  25%, 75% {
+    opacity: 0;
+  }
+}
+
+@keyframes bulb {
+  from, 50%, to {
+    fill: #FDE27C;
+  }
+
+  25%, 75% {
+    fill: #F3F2F0;
+  }
+}
+
+@keyframes wire {
+  from, 50%, to {
+    fill: #D49000;
+  }
+
+  25%, 75% {
+    fill: #DAD9DA;
+  }
+}
+
 h3 {
   margin-top: 150px;
   z-index: 4;
@@ -21,39 +61,6 @@ h3 {
   justify-content: flex-start;
   font-size: calc(10px + 2vmin);
   color: white;
-}
-
-@keyframes flash {
-  from, 50%, to {
-    opacity: 1;
-  }
-
-  25%, 75% {
-    opacity: 0;
-  }
-}
-
-@keyframes bulb {
-  from, 50%, to {
-    fill: #FDE27C;
-  }
-
-  25%, 75% {
-    fill: #F3F2F0;
-  }
-}
-
-.brickwall-wrapper {
-  display: flex;
-  animation-name: flash;
-  animation-duration: .4s;
-  animation-fill-mode: both;
-  border-radius: 30%;
-  position: absolute;
-  top: -90px;
-  left: 1px;
-  filter: brightness(.5);
-  box-shadow: inset 0px 0px 40px 40px #251F21;
 }
 
 .bulb-lit {
@@ -116,4 +123,26 @@ h3 {
   height: 200px;
   width: 200px;
   z-index: 2;
+}
+
+.reminder {
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  color: #E9D19B;
+  font-family: Abril Fatface;
+  left: 60%;
+  position: absolute;
+  top: 232px;
+  transform: rotate(26deg);
+  width: 115px;
+}
+
+.wire-on {
+  animation-name: wire;
+  animation-duration: .4s;
+  fill: #D49000;
+}
+
+.wire-off {
+  fill: #DAD9DA;
 }

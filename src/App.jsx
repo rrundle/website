@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Draggable from 'react-draggable'
-import Brickwall from './icons/Brickwall'
 import LightBulb from './icons/LightBulb'
+import Navbar from './modules/Navbar'
 import './App.css'
 
 const App = () => {
@@ -10,6 +10,7 @@ const App = () => {
   const [mouseDown, setDownPosition] = useState(0)
   const [chainReset, resetChain] = useState(false)
   const [chainPulled, setChainPulled] = useState(false)
+  const [reminderText, setReminderText] = useState(false)
 
   const handleDragStart = (e) => {
     const yPosition = e.pageY || e.changedTouches[0].pageY
@@ -22,6 +23,11 @@ const App = () => {
   }
 
   useEffect(() => {
+    setTimeout(() => {
+      console.log('running timeout!!');
+      if (!light) setReminderText(true)
+    }, 10000)
+
     if (mouseUp > mouseDown && (mouseUp - mouseDown) > 37) {
       setLight(true)
     }
@@ -36,10 +42,12 @@ const App = () => {
   return (
     <div className="App">
       <header className="App-header">
+        <Navbar light={light} />
         <h3>{light ? 'Hi, I\'m Ryan Rundle' : 'Hello There'}</h3>
         <div className="light-bright-wrapper">
           <div className={`light-bright ${light ? 'light-bright-on' : ''}`} />
         </div>
+        {reminderText && !light && <div className="reminder">Turn on the dang light</div>}
         <LightBulb light={light} />
         <Draggable
           axis="y"

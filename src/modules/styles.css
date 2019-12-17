@@ -1,0 +1,30 @@
+@keyframes flash {
+  from, 50%, to {
+    opacity: 1;
+  }
+
+  25%, 75% {
+    opacity: 0;
+  }
+}
+
+a {
+  color: white;
+  font-family: Special Elite;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.navbar-wrapper {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 50px;
+  width: 100%;
+}
+
+.navbar-wrapper-on {
+  animation-name: flash;
+  animation-duration: .4s;
+}
