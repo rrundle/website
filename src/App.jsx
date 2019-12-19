@@ -9,8 +9,6 @@ const App = () => {
   const [mouseUp, setUpPosition] = useState(0)
   const [mouseDown, setDownPosition] = useState(0)
   const [chainReset, resetChain] = useState(false)
-  const [chainPulled, setChainPulled] = useState(false)
-  const [reminderText, setReminderText] = useState(false)
 
   const handleDragStart = (e) => {
     const yPosition = e.pageY || e.changedTouches[0].pageY
@@ -20,24 +18,24 @@ const App = () => {
   const handleDragStop = (e) => {
     const yPosition = e.pageY || e.changedTouches[0].pageY
     setUpPosition(yPosition)
+    if (yPosition > 0) resetChain(true)
   }
 
   useEffect(() => {
-    setTimeout(() => {
-      console.log('running timeout!!');
-      if (!light) setReminderText(true)
-    }, 10000)
-
-    if (mouseUp > mouseDown && (mouseUp - mouseDown) > 37) {
-      setLight(true)
-    }
-    if (light) {
-      resetChain(true)
-    }
     if (mouseUp > mouseDown) {
-      setChainPulled(true)
+      if ((mouseUp - mouseDown) > 50) {
+        if (light) {
+          setLight(false)
+          setDownPosition(0)
+          setUpPosition(0)
+        } else {
+          setLight(true)
+          setDownPosition(0)
+          setUpPosition(0)
+        }
+      }
     }
-  }, [chainPulled, chainReset, mouseUp, mouseDown, light])
+  }, [chainReset, mouseUp, mouseDown, light])
 
   return (
     <div className="App">
@@ -47,7 +45,6 @@ const App = () => {
         <div className="light-bright-wrapper">
           <div className={`light-bright ${light ? 'light-bright-on' : ''}`} />
         </div>
-        {reminderText && !light && <div className="reminder">Turn on the dang light</div>}
         <LightBulb light={light} />
         <Draggable
           axis="y"

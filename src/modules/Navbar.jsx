@@ -7,12 +7,12 @@ const Navbar = ({ light }) => {
   return (
     <div className={`navbar-wrapper ${light && 'navbar-wrapper-on'}`}>
       {light && (
-        <navbar>
-          <a href="/#">About</a>
-          <a href="/#">Projects</a>
+        <nav>
+          <a href="https://github.com/rrundle" target="_blank" rel="noopener noreferrer">About</a>
+          <a href="https://github.com/rrundle" target="_blank" rel="noopener noreferrer">Projects</a>
           <a href="/#">Resume</a>
-          <a href="/#">Contact</a>
-        </navbar>
+          <a href="mailto:ryan@ryanrundle.com" target="_blank" rel="noopener noreferrer">Contact</a>
+        </nav>
       )}
     </div>
   )
