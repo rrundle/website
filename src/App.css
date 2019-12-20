@@ -1,0 +1,159 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes flash {
+  from, 50%, to {
+    opacity: 1;
+  }
+
+  25%, 75% {
+    opacity: 0;
+  }
+}
+
+@keyframes bulb {
+  from, 50%, to {
+    fill: #FDE27C;
+  }
+
+  25%, 75% {
+    fill: #F3F2F0;
+  }
+}
+
+@keyframes wire {
+  from, 50%, to {
+    fill: #D49000;
+  }
+
+  25%, 75% {
+    fill: #DAD9DA;
+  }
+}
+
+h3 {
+  margin-top: 100px;
+  z-index: 4;
+}
+
+h4 {
+  margin: 0 0 15px;
+  min-height: 30px;
+}
+
+.App {
+  font-family: Special Elite;
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #251F21;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.bulb-lit {
+  animation-name: bulb;
+  animation-duration: .4s;
+  fill: #FDE27C;
+}
+
+.bulb-unlit {
+  fill: #F3F2F0;
+}
+
+.chain-link {
+  background-image: url('https://i.imgur.com/TiaFhso.png');
+  background-repeat: no-repeat;
+  background-size: 30px;
+  height: 35px;
+  opacity: .8;
+  transform: rotate(45deg);
+  width: 35px;
+}
+
+.chain-wrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: 3px;
+  margin-top: -80px;
+  min-height: 300px;
+  width: 75px;
+  z-index: 1;
+}
+
+.description {
+  animation-name: flash;
+  animation-duration: .4s;
+}
+
+.light-bright {
+  border-bottom: none;
+  border-radius: 53%;
+  filter: blur(70px);
+  opacity: .9;
+  z-index: 1;
+  position: absolute;
+  width: 50vw;
+  height: 150px;
+  top: -60px;
+}
+
+.light-bright-on {
+  animation-name: flash;
+  animation-duration: .4s;
+  border-top: solid #FDE27C 120px;
+}
+
+.light-bright-wrapper {
+  width: 50vw;
+  height: 30vh;
+  position: absolute;
+  top: 170px;
+}
+
+.light-bulb-svg {
+  height: 200px;
+  width: 200px;
+  z-index: 2;
+}
+
+.reminder {
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  color: #E9D19B;
+  font-family: Abril Fatface;
+  left: 60%;
+  position: absolute;
+  top: 232px;
+  transform: rotate(26deg);
+  width: 115px;
+}
+
+.wire-on {
+  animation-name: wire;
+  animation-duration: .4s;
+  fill: #D49000;
+}
+
+.wire-off {
+  fill: #DAD9DA;
+}
