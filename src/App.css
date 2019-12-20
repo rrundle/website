@@ -103,6 +103,11 @@ h4 {
 .description {
   animation-name: flash;
   animation-duration: .4s;
+  z-index: 1;
+}
+
+.description-off {
+  opacity: .25;
 }
 
 .light-bright {
