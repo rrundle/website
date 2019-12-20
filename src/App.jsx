@@ -41,7 +41,8 @@ const App = () => {
     <div className="App">
       <header className="App-header">
         <Navbar light={light} />
-        <h3>{light ? 'Hi, I\'m Ryan Rundle' : 'Hello There'}</h3>
+        <h3 className={light && 'description'}>{light ? 'Hi, I\'m Ryan' : 'Hello There'}</h3>
+        <h4 className={light && 'description'}>{light && 'I\'m a Software Engineer'}</h4>
         <div className="light-bright-wrapper">
           <div className={`light-bright ${light ? 'light-bright-on' : ''}`} />
         </div>
