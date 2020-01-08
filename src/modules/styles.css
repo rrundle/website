@@ -1,9 +1,11 @@
 @keyframes flash {
   from, 50%, to {
+    -webkit-opacity: 1;
     opacity: 1;
   }
 
   25%, 75% {
+    -webkit-opacity: 0;
     opacity: 0;
   }
 }
@@ -25,6 +27,8 @@ a {
 }
 
 .navbar-wrapper-on {
+  -webkit-animation-name: flash;
+  -webkit-animation-duration: .4s;
   animation-name: flash;
   animation-duration: .4s;
 }

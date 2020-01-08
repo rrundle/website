@@ -1,39 +1,47 @@
 @keyframes fadeIn {
   from {
+    -webkit-opacity: 0;
     opacity: 0;
   }
 
   to {
+    -webkit-opacity: 1;
     opacity: 1;
   }
 }
 
 @keyframes flash {
   from, 50%, to {
+    -webkit-opacity: 1;
     opacity: 1;
   }
 
   25%, 75% {
+    -webkit-opacity: 0;
     opacity: 0;
   }
 }
 
 @keyframes bulb {
   from, 50%, to {
+    -webkit-fill: #FDE27C;
     fill: #FDE27C;
   }
 
   25%, 75% {
+    -webkit-fill: #F3F2F0;
     fill: #F3F2F0;
   }
 }
 
 @keyframes wire {
   from, 50%, to {
+    -webkit-fill: #D49000;
     fill: #D49000;
   }
 
   25%, 75% {
+    -webkit-fill: #DAD9DA;
     fill: #DAD9DA;
   }
 }
@@ -49,6 +57,14 @@ h4 {
 }
 
 .App {
+  background-color: #251F21;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: calc(10px + 2vmin);
+  color: white;
   font-family: Special Elite;
   text-align: center;
 }
@@ -69,6 +85,8 @@ h4 {
 }
 
 .bulb-lit {
+  -webkit-animation-name: bulb;
+  -webkit-animation-duration: .4s;
   animation-name: bulb;
   animation-duration: .4s;
   fill: #FDE27C;
@@ -101,6 +119,8 @@ h4 {
 }
 
 .description {
+  -webkit-animation-name: flash;
+  -webkit-animation-duration: .4s;
   animation-name: flash;
   animation-duration: .4s;
   z-index: 1;
@@ -111,18 +131,22 @@ h4 {
 }
 
 .light-bright {
+  -webkit-border-radius: 50%;
+  -webkit-filter: blur(60px);
   border-bottom: none;
-  border-radius: 53%;
-  filter: blur(70px);
+  border-radius: 50%;
+  filter: blur(60px);
   opacity: .9;
   z-index: 1;
-  position: absolute;
   width: 50vw;
   height: 150px;
-  top: -60px;
+  margin-top: -60px;
 }
 
 .light-bright-on {
+  -webkit-animation-name: flash;
+  -webkit-animation-duration: .4s;
+  -webkit-border-top: solid #FDE27C 120px;
   animation-name: flash;
   animation-duration: .4s;
   border-top: solid #FDE27C 120px;
@@ -141,19 +165,9 @@ h4 {
   z-index: 2;
 }
 
-.reminder {
-  animation-name: fadeIn;
-  animation-duration: 1s;
-  color: #E9D19B;
-  font-family: Abril Fatface;
-  left: 60%;
-  position: absolute;
-  top: 232px;
-  transform: rotate(26deg);
-  width: 115px;
-}
-
 .wire-on {
+  -webkit-animation-name: wire;
+  -webkit-animation-duration: .4s;
   animation-name: wire;
   animation-duration: .4s;
   fill: #D49000;

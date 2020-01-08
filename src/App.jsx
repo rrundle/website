@@ -22,6 +22,7 @@ const App = () => {
   }
 
   useEffect(() => {
+    console.log('running effect');
     if (mouseUp > mouseDown) {
       if ((mouseUp - mouseDown) > 50) {
         if (light) {
@@ -39,33 +40,31 @@ const App = () => {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <Navbar light={light} />
-        <h3 className={light ? 'description' : 'description-off'}>{light ? 'Hi, I\'m Ryan' : 'Hello There'}</h3>
-        <h4 className={light ? 'description' : ''}>{light && 'I\'m a Software Engineer'}</h4>
-        <div className="light-bright-wrapper">
-          <div className={`light-bright ${light ? 'light-bright-on' : ''}`} />
-        </div>
-        <LightBulb light={light} />
-        <Draggable
-          axis="y"
-          bounds={{ top: 0, bottom: 80 }}
-          onStart={handleDragStart}
-          onStop={handleDragStop}
-          position={chainReset && { x: 0, y: 0 }}
-        >
-          <div className="draggable-element">
-            <div className="chain-wrapper">
-              <div className="chain-link" />
-              <div className="chain-link" />
-              <div className="chain-link" />
-              <div className="chain-link" />
-              <div className="chain-link" />
-            </div>
+      <Navbar light={light} />
+      <h3 className={light ? 'description' : 'description-off'}>{light ? 'Hi, I\'m Ryan' : 'Hello There'}</h3>
+      <h4 className={light ? 'description' : ''}>{light && 'I\'m a Software Engineer'}</h4>
+      <div className="light-bright-wrapper">
+        <div className={`light-bright ${light ? 'light-bright-on' : ''}`} />
+      </div>
+      <LightBulb light={light} />
+      <Draggable
+        axis="y"
+        bounds={{ top: 0, bottom: 80 }}
+        onStart={handleDragStart}
+        onStop={handleDragStop}
+        position={chainReset && { x: 0, y: 0 }}
+      >
+        <div className="draggable-element">
+          <div className="chain-wrapper">
+            <div className="chain-link" />
+            <div className="chain-link" />
+            <div className="chain-link" />
+            <div className="chain-link" />
+            <div className="chain-link" />
           </div>
+        </div>
 
-        </Draggable>
-      </header>
+      </Draggable>
     </div>
   )
 }
