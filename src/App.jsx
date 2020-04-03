@@ -22,7 +22,6 @@ const App = () => {
   }
 
   useEffect(() => {
-    console.log('running effect');
     if (mouseUp > mouseDown) {
       if ((mouseUp - mouseDown) > 50) {
         if (light) {
