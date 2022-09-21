@@ -16,9 +16,14 @@
     opacity: 1;
   }
 
-  25%, 75% {
+  25% {
     -webkit-opacity: 0;
     opacity: 0;
+  }
+
+  75% {
+    -webkit-opacity: .38;
+    opacity: .38;
   }
 }
 
@@ -46,6 +51,10 @@
   }
 }
 
+body {
+  overflow: hidden;
+}
+
 h3 {
   margin-top: 100px;
   z-index: 4;
@@ -54,6 +63,10 @@ h3 {
 h4 {
   margin: 0 0 15px;
   min-height: 30px;
+}
+
+nav {
+  overflow: hidden;
 }
 
 .App {
@@ -131,16 +144,18 @@ h4 {
 }
 
 .light-bright {
-  -webkit-border-radius: 50%;
+  -webkit-border-radius: 40%;
   -webkit-filter: blur(60px);
-  border-bottom: none;
-  border-radius: 50%;
+  border-radius: 40%;
   filter: blur(60px);
+  border-bottom: none;
   opacity: .9;
   z-index: 1;
   width: 50vw;
-  height: 150px;
-  margin-top: -60px;
+  max-width: 550px;
+  height: 30vh;
+  position: fixed;
+  top: 115px;
 }
 
 .light-bright-on {
@@ -152,17 +167,15 @@ h4 {
   border-top: solid #FDE27C 120px;
 }
 
-.light-bright-wrapper {
-  width: 50vw;
-  height: 30vh;
-  position: absolute;
-  top: 170px;
+.light-bright-off {
+  display: none;
 }
 
 .light-bulb-svg {
   height: 200px;
   width: 200px;
   z-index: 2;
+  margin-top: 25px;
 }
 
 .wire-on {

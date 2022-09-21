@@ -24,15 +24,9 @@ const App = () => {
   useEffect(() => {
     if (mouseUp > mouseDown) {
       if ((mouseUp - mouseDown) > 50) {
-        if (light) {
-          setLight(false)
-          setDownPosition(0)
-          setUpPosition(0)
-        } else {
-          setLight(true)
-          setDownPosition(0)
-          setUpPosition(0)
-        }
+        setDownPosition(0)
+        setUpPosition(0)
+        setLight(!light)
       }
     }
   }, [chainReset, mouseUp, mouseDown, light])
@@ -42,9 +36,7 @@ const App = () => {
       <Navbar light={light} />
       <h3 className={light ? 'description' : 'description-off'}>{light ? 'Hi, I\'m Ryan' : 'Hello There'}</h3>
       <h4 className={light ? 'description' : ''}>{light && 'I\'m a Software Engineer'}</h4>
-      <div className="light-bright-wrapper">
-        <div className={`light-bright ${light ? 'light-bright-on' : ''}`} />
-      </div>
+      <div className={`light-bright ${light ? 'light-bright-on' : 'light-bright-off'}`} />
       <LightBulb light={light} />
       <Draggable
         axis="y"
